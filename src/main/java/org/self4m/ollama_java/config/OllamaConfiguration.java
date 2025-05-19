@@ -1,6 +1,6 @@
 package org.self4m.ollama_java.config;
 
-import org.springframework.ai.chat.prompt.ChatOptions;
+import org.springframework.ai.ollama.api.OllamaOptions;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
@@ -22,20 +22,16 @@ public class OllamaConfiguration {
     @Value("${spring.ai.ollama.chat.options.top-k}")
     private int OLLAMA_OPTION_TOP_K;
 
-    public ChatOptions getChatOptions() {
-        ChatOptions chatOptions = ChatOptions.builder()
-                // 模型名称
+    public OllamaOptions getChatOptions() {
+        OllamaOptions options = OllamaOptions.builder()
                 .model(OLLAMA_MODEL)
-                // 模型温度
                 .temperature(OLLAMA_TEMPERATURE)
-                // 最大输入输出token
-                .maxTokens(OLLAMA_MAX_TOKENS)
-                // 累积概率采样
+                .numPredict(OLLAMA_MAX_TOKENS)
                 .topP(OLLAMA_OPTION_TOP_P)
-                // 概率抽取量
                 .topK(OLLAMA_OPTION_TOP_K)
                 .build();
-        return chatOptions;
+
+        return options;
     }
 
 }
