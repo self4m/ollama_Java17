@@ -23,15 +23,14 @@ public class OllamaConfiguration {
     private int OLLAMA_OPTION_TOP_K;
 
     public OllamaOptions getChatOptions() {
-        OllamaOptions options = OllamaOptions.builder()
+
+        return OllamaOptions.builder()
                 .model(OLLAMA_MODEL)
                 .temperature(OLLAMA_TEMPERATURE)
                 .numPredict(OLLAMA_MAX_TOKENS)
                 .topP(OLLAMA_OPTION_TOP_P)
                 .topK(OLLAMA_OPTION_TOP_K)
                 .build();
-
-        return options;
     }
 
 }

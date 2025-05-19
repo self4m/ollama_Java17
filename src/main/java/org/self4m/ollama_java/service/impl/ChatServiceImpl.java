@@ -42,9 +42,6 @@ public class ChatServiceImpl implements ChatService {
         Prompt prompt = new Prompt(messages, ollamaConfiguration.getChatOptions());
         Flux<ChatResponse> chatResponseFlux = ollamaChatModel.stream(prompt);
 
-        return chatResponseFlux.map(chatResponse -> {
-            String data = chatResponse.getResults().get(0).getOutput().getText();
-            return data;
-        });
+        return chatResponseFlux.mapNotNull(chatResponse -> chatResponse.getResults().get(0).getOutput().getText());
     }
 }
