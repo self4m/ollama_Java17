@@ -10,26 +10,10 @@ public class OllamaConfiguration {
     @Value("${spring.ai.ollama.model}")
     private String OLLAMA_MODEL;
 
-    @Value("${spring.ai.ollama.chat.options.temperature}")
-    private double OLLAMA_TEMPERATURE;
-
-    @Value("${spring.ai.ollama.chat.options.max-tokens}")
-    private int OLLAMA_MAX_TOKENS;
-
-    @Value("${spring.ai.ollama.chat.options.top-p}")
-    private double OLLAMA_OPTION_TOP_P;
-
-    @Value("${spring.ai.ollama.chat.options.top-k}")
-    private int OLLAMA_OPTION_TOP_K;
-
+    // 可根据官方文档进行配置
     public OllamaOptions getChatOptions() {
-
         return OllamaOptions.builder()
                 .model(OLLAMA_MODEL)
-                .temperature(OLLAMA_TEMPERATURE)
-                .numPredict(OLLAMA_MAX_TOKENS)
-                .topP(OLLAMA_OPTION_TOP_P)
-                .topK(OLLAMA_OPTION_TOP_K)
                 .build();
     }
 

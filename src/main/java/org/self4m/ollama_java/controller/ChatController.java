@@ -25,8 +25,8 @@ public class ChatController {
         return message;
     }
 
-    // 按照 SSE 标准进行返回
     @GetMapping(value = "stream_chat/",produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+    // 按照 SSE 标准进行返回
     // 一次性流式对话
     public ResponseEntity<Flux<String>> disposableStreamChat(@RequestParam String text){
         log.debug("接收到的内容是:{}", text);
@@ -34,16 +34,5 @@ public class ChatController {
         return ResponseEntity.ok()
                 .body(message);
     }
-
-    // 仅按照便于查看的格式进行流式返回
-    @GetMapping(value = "stream_chat_view/")
-    // 一次性流式对话
-    public ResponseEntity<Flux<String>> disposableStreamChat_view(@RequestParam String text){
-        log.debug("接收到的内容是:{}", text);
-        Flux<String> message = chatService.getStreamResponse(text);
-        return ResponseEntity.ok()
-                .body(message);
-    }
-
 
 }
