@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <timestamp key="START_TIME" datePattern="yyyy-MM-dd_HH-mm-ss"/>
+    <property name="LOG_PATH" value="logs"/>
+
+    <!-- 全部日志，直接放 logs/ 文件夹 -->
+    <appender name="ALL_LOG" class="ch.qos.logback.core.FileAppender">
+        <file>${LOG_PATH}/app-${START_TIME}.log</file>
+        <append>false</append>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+            <charset>utf-8</charset>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="ALL_LOG" />
+    </root>
+
+</configuration>
