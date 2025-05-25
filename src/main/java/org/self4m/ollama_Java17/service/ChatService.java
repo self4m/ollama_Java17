@@ -1,6 +1,6 @@
-package org.self4m.ollama_java.service;
+package org.self4m.ollama_Java17.service;
 
-import org.self4m.ollama_java.pojo.ChatParam;
+import org.self4m.ollama_Java17.pojo.ChatParam;
 import reactor.core.publisher.Flux;
 
 public interface ChatService {

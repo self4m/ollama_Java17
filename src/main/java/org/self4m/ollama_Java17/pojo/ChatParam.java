@@ -1,4 +1,4 @@
-package org.self4m.ollama_java.pojo;
+package org.self4m.ollama_Java17.pojo;
 
 import lombok.Data;
 import org.springframework.web.multipart.MultipartFile;

@@ -1,4 +1,4 @@
-package org.self4m.ollama_java;
+package org.self4m.ollama_Java17;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package org.self4m.ollama_java.config;
+package org.self4m.ollama_Java17.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;

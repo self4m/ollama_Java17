@@ -1,4 +1,4 @@
-package org.self4m.ollama_java.config;
+package org.self4m.ollama_Java17.config;
 
 import org.springframework.ai.ollama.api.OllamaOptions;
 import org.springframework.beans.factory.annotation.Value;

@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.self4m</groupId>
-    <artifactId>ollama_java</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>ollama</name>
-    <description>ollama</description>
+    <artifactId>ollama_Java17</artifactId>
+    <version>1.0</version>
+    <name>ollama_Java17</name>
+    <description>基于 Java 17 调用 ollama api进行对话</description>
 
     <properties>
         <java.version>17</java.version>
@@ -55,6 +55,23 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>org.self4m.ollama_Java17.OllamaApplication</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
             </plugin>
         </plugins>
     </build>

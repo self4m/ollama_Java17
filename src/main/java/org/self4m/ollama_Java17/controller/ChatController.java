@@ -1,16 +1,13 @@
-package org.self4m.ollama_java.controller;
+package org.self4m.ollama_Java17.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import org.self4m.ollama_java.pojo.ChatParam;
-import org.self4m.ollama_java.service.ChatService;
+import org.self4m.ollama_Java17.pojo.ChatParam;
+import org.self4m.ollama_Java17.service.ChatService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 import reactor.core.publisher.Flux;
-
-import javax.swing.plaf.multi.MultiFileChooserUI;
 
 @Slf4j
 @RestController

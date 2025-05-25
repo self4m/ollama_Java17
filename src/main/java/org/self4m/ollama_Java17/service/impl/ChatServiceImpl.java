@@ -1,9 +1,9 @@
-package org.self4m.ollama_java.service.impl;
+package org.self4m.ollama_Java17.service.impl;
 
 import jakarta.annotation.Resource;
-import org.self4m.ollama_java.config.OllamaConfiguration;
-import org.self4m.ollama_java.pojo.ChatParam;
-import org.self4m.ollama_java.service.ChatService;
+import org.self4m.ollama_Java17.config.OllamaConfiguration;
+import org.self4m.ollama_Java17.pojo.ChatParam;
+import org.self4m.ollama_Java17.service.ChatService;
 import org.springframework.ai.chat.messages.Message;
 import org.springframework.ai.chat.messages.SystemMessage;
 import org.springframework.ai.chat.messages.UserMessage;
@@ -11,7 +11,6 @@ import org.springframework.ai.chat.model.ChatResponse;
 import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.ai.content.Media;
 import org.springframework.ai.ollama.OllamaChatModel;
-import org.springframework.ai.ollama.api.OllamaModel;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import reactor.core.publisher.Flux;
